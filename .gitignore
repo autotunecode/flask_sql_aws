@@ -1,0 +1,403 @@
+# .gitignore - Flask + PostgreSQL + Docker プロジェクト用除外ファイル
+
+# ================================
+# 🔒 セキュリティ・機密情報
+# ================================
+.env
+.env.local
+.env.production
+.env.staging
+.env.development
+.env.*.local
+*.pem
+*.key
+*.crt
+*.p12
+config.ini
+secrets.json
+
+# API キーとトークン
+api_keys.txt
+tokens.txt
+credentials.json
+
+# ================================
+# 🐍 Python関連
+# ================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+junit.xml
+test-reports/
+
+# Virtual environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# ================================
+# 🐳 Docker関連
+# ================================
+# Docker volumes and data
+**/data/
+postgres_data/
+minio_data/
+volume_data/
+
+# Docker logs
+docker-compose.override.yml
+.dockerignore.bak
+
+# Container logs
+*.log
+logs/
+log/
+
+# ================================
+# 💾 データベース関連
+# ================================
+# Database files
+*.db
+*.sqlite3
+*.sqlite
+pgdata/
+postgresql/
+pg_log/
+
+# Database dumps
+*.sql.gz
+*.sql.bz2
+database_backup/
+dumps/
+
+# ================================
+# 📁 ファイルアップロード・ストレージ関連
+# ================================
+# アップロードされたファイル
+uploads/
+uploaded_images/
+temp_uploads/
+storage/
+media/
+static/uploads/
+
+# 画像ファイル（テスト用以外）
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.webp
+*.svg
+*.ico
+!sample_images/
+!test_images/
+
+# 一時ファイル
+temp/
+tmp/
+*.tmp
+*.temp
+
+# ================================
+# 🖥️ OS関連
+# ================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ================================
+# 🛠️ IDE・エディタ関連
+# ================================
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+Session.vim
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
+
+# ================================
+# 📊 監視・ログ関連
+# ================================
+# Application logs
+app.log
+flask.log
+error.log
+access.log
+debug.log
+*.log.*
+
+# Monitoring data
+monitoring/
+metrics/
+performance/
+
+# ================================
+# 🧪 テスト関連
+# ================================
+# Test artifacts
+test_results/
+test_output/
+test_uploads/
+test_data/
+.coverage.*
+htmlcov/
+
+# Performance test results
+stress_test_results/
+load_test_results/
+
+# ================================
+# 📦 依存関係・パッケージ管理
+# ================================
+# Node.js (フロントエンド用)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ================================
+# 🔧 ビルド・コンパイル関連
+# ================================
+# Compilation
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ================================
+# 🌐 Web関連
+# ================================
+# Static files (generated)
+staticfiles/
+collected-static/
+
+# ================================
+# ☁️ クラウド・デプロイ関連
+# ================================
+# AWS
+.aws/
+aws-exports.js
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+
+# Kubernetes
+*.kubeconfig
+
+# Heroku
+.env.production
+
+# ================================
+# 📄 ドキュメント・リポート関連
+# ================================
+# Generated documentation
+docs/_build/
+site/
+
+# Report files
+reports/
+coverage-reports/
+
+# ================================
+# 🔄 バックアップ・一時ファイル
+# ================================
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+backup/
+backups/
+
+# Lock files
+*.lock
+.lock
+
+# ================================
+# 📱 モバイル関連（将来の拡張用）
+# ================================
+# React Native
+.expo/
+.expo-shared/
+
+# ================================
+# 🎯 プロジェクト固有の除外
+# ================================
+# このプロジェクト固有の一時ファイル
+stress_test_output/
+integration_test_results/
+benchmark_results/
+
+# MinIO関連のテストファイル
+minio_test_data/
+
+# チュートリアル作業用ファイル
+tutorial_workspace/
+practice/
+
+# デバッグ用ファイル
+debug_*
+temp_*
+
+# ローカル設定ファイル
+local_config.py
+dev_settings.py
+
+# ================================
+# ✅ 必要ファイルの明示的な保持
+# ================================
+# 以下のファイルは除外しない
+!.gitkeep
+!.gitignore
+!.env.example
+!requirements.txt
+!Dockerfile
+!docker-compose.yml
+!init_db.sql
+!README.md
+!TUTORIAL.md
+!PHASE*.md 
